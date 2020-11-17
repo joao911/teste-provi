@@ -1,0 +1,14 @@
+.table-info{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    margin-top: 1rem;
+    h2{
+        font-size: 20px;
+    }
+    p{
+        color:red
+    }
+}
