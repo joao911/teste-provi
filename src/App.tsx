@@ -4,20 +4,19 @@ import Table from './components/Table';
 import api from './services/api';
 
 function App() {
-  const [borrowing, setBorrowing] = useState([]);
+  const [borrowing, setBorrowing] = useState({});
 
 
   useEffect(() => {
-    api.get('baseURL').then(response => {
-      setBorrowing(response.data);
-      console.log(setBorrowing)
+    api.get('/').then(response => {
+      setBorrowing(response.data);         
     })
   }, []);
 
   return (
     <div className="App">
       <Header />
-      <Table />
+      <Table borrowing={borrowing}/>
     </div>
   );
 }

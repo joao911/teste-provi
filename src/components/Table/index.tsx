@@ -2,13 +2,16 @@ import React from 'react';
 import TableInfo from '../TableInfo';
 import './table.scss';
 
-const Table: React.FC = () => {
+interface BorrowingData {
+    borrowing: any;
+}
+
+const Table: React.FC<BorrowingData> = ({ borrowing }) => {
     return (
         <div className="table">
-            <TableInfo/>
-            <TableInfo/>
-            <TableInfo/>
-            <TableInfo/>
+            
+                <TableInfo  borrow={borrowing} />
+            
         </div>
     );
 }
